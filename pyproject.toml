@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "djangoproject"
+version = "0.1.0"
+description = ""
+authors = ["JoonHoSeong <joonho1366@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.6"
+black = "^24.4.2"
+isort = "^5.13.2"
+mypy = "^1.10.0"
+django-stubs = "^5.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile="black"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+python_version = 3.12
+strict = true
+
+[[tool.mypy.overrides]]
+module = "*.migrations.*"
+ignore_errors = true
+
+[tool.django-stubs]
+django_settings_module = "djangoProject.settings"
