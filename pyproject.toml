@@ -12,6 +12,9 @@ black = "^24.4.2"
 isort = "^5.13.2"
 mypy = "^1.10.0"
 django-stubs = "^5.0.2"
+pymysql = "^1.1.1"
+types-pymysql = "^1.1.0.20240524"
+cryptography = "^42.0.8"
 
 
 [build-system]
